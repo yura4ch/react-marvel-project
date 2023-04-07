@@ -34,7 +34,7 @@ const SinglePage = ({Component, dataType}) => {
 
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading ? <Spinner/> : null;
-    const content = !(loading || error || !comic) ? <Component data={data}/> : null;
+    const content = !(loading || error || !data) ? <Component data={data}/> : null;
 
     return (
         <>
